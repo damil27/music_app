@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Fauna+One&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Lora:ital,wght@1,400;1,500;1,600;1,700&family=Varela&family=Varela+Round&display=swap'); 
+
+
+/* red: {
+    100: "#fddedb",
+    200: "#fbbdb6",
+    300: "#f99d92",
+    400: 
+    500: "#f55b49",
+    600: "#c4493a",
+    700: "#93372c",
+    800: "#62241d",
+    900: "#31120f"
+}, */
+
+
+
+:root{
+    --primary-color: #f77c6d;
+}
+
+::-webkit-scrollbar {
+    width: 3px;
+    height: 5px;
+}
+
+::-webkit-scrollbar-track{
+    background: #111;
+}
+::-webkit-scrollbar-thumb{
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #726a6a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    background-color:#726a6a;
+    color: white;
+}
+.container{
+height: 650px;
+width: 366px;
+background-color: white;
+position: relative;
+overflow: hidden;
+margin-top: 50px;
+border-radius: 10px;
+box-shadow: 0px 0px 25px rgba(0,0,0,0.5) ;
+}
+
+.icon:hover{
+    color: red;
+    background-color: aquamarine;
+    cursor: pointer;
+}
+.icon:active{
+    color: var(--primary-color);
+    background-color: aquamarine;
+    cursor: pointer;
+
+}
+.top{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    z-index: 10;
+  
+
+}
+ .coverImage{
+    width: 100%;
+    height: 366px;
+    background: url("./assets/images/cover_image.jpg") no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    transform: 0% 0%;
+    transform-origin: 0% 0%;
+ }
+ .container.active  .coverImage{
+    transform: scale(0.251, 0.251);
+    left: 23px;
+     top: 60px;
+    border-radius: 20px; 
+ }
+ .container .active .top{
+    color:#111
+ }
+ .mediaPlayer{
+    position: absolute;
+    top: 366px;
+    left: 0;
+    height: 366px;
+    background-color: #111;
+    width: 100%;
+    transform-origin: 0% 0%;
+    transition: all 0.3s;
+ }
+ .container.active .mediaPlayer{
+    height: 470px;
+    top: 180px;
+    left:0;
+ }
+ .listWrapper{
+    height: 425px;
+    width: 100%;
+    overflow: auto;
+    position: absolute;
+    top: 378px;
+    transform-origin: 0% 0%;
+    transform: all 0.3s;
+    opacity: 0;
+    visibility: hidden;
+ }
+ .container.active .listWrapper{
+    top: 182px;
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+ }
+ .list{
+    width: 100%;
+    border-spacing: 0px 2px;
+ }
+ .list tr{
+    font-family: "lora";
+    height: 50px;
+    text-align:center ;
+    text-indent: 8px;
+    transform-origin: 0% 50%;
+ }
+ .list tr:hover{
+    background-color: #000;
+    cursor: pointer;
+ }
+.list .songTitle{
+    width: 215px;
+    font-size: 10px;
+    align-items: left;
+    text-indent: 15px;
+    transform: all 0.5s;
+}
+.list tr:hover .songTitle {
+   padding-left: 5px;
+   width: 210px;
+}
+.currentSongTitle{
+    position: absolute;
+    font-size: 18px;
+    bottom: -60px;
+    right: 50%;
+    transform: all 0.3s;
+}
+.container.active .currentSongTitle{
+    bottom: 10px;
+}
+.info{
+    position: absolute;
+    top:440px ;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    transition: all 0.3s;
+}
+.info h2{
+    font-family: "lora";
+    margin-bottom: 5px;
+}
+.info h3{
+    color: rgb(161, 172, 172);
+    font-size: 10px;
+}
+.container.active .info{
+    top: 66px;
+    left: 126px;
+    text-align: left;
+    transform: translateX(0);
+    color:#111;
+}
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+    position: absolute;
+    bottom: 100px;
+    z-index: 10;
+    transform: all 0.3s;
+}
+.controls img{
+    width: 100%;
+    height: 35px;
+    
+    
+}
+.container.active .controls{
+    position: absolute;
+    width: 216px;
+    bottom: 4px;
+    left: -40px;
+    transform: scale(0.45);
+}

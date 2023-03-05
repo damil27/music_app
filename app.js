@@ -1,0 +1,1 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Fauna+One&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Lora:ital,wght@1,400;1,500;1,600;1,700&family=Varela&family=Varela+Round&display=swap');
